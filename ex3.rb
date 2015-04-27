@@ -2,13 +2,17 @@
 #
 #What is the largest prime factor of the number 600851475143 ?
 prime = []
-n = 2
-while n < 600851475143 do
-	if 600851475143 % n == 0
-		prime << n
+n = 600851475143
+m = 2
+
+while n != 1 do
+	if n%m == 0
+		prime << m
+		n = n/m
+		m = 2
+	else
+		m += 1
 	end
-	
-	n += 1
 end
 
-puts prime.last
+puts prime
