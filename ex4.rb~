@@ -12,7 +12,7 @@ while n < 1000 && m < 1000 do
 	product_s = product.to_s
 	(product_s.size/2).times do |i|
 		if product_s[i] == product_s[product_s.size-(1+i)]
-			if i == product_s.size/2
+			if i == (product_s.size/2)-1
 				puts product
 				palidromic << product
 			end
