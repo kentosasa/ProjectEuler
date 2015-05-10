@@ -5,13 +5,14 @@ prime = []
 n = 600851475143
 m = 2
 
-while n != 1 do
+while !(n**0.5).integer? do
 	if n%m == 0
 		prime << m
 		n = n/m
 		m = 2
 	else
 		m += 1
+    puts n
 	end
 end
 
