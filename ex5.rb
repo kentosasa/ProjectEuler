@@ -28,26 +28,6 @@ puts n
 
 #最小公倍数を使用する
 
-n = 1
-multiple = []
-
-20.times do |num|
-	n = num+1
-
-	n.times do |i|
-		if 
-		if n%(n-i-1) == 0
-			n = n/(n-i-1)
-		end
-	end
-	multiple << n
-	puts n
-end
-
-product = 1
-multiple.each do |m|
-	product *= m
-end
-
-puts product
-	
+these = []
+1.upto(20){|i| these<<i}
+puts these.reduce(:lcm)
