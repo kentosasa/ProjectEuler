@@ -2,32 +2,25 @@
 #
 #What is the 10 001st prime number?
 
-require 'pry'
-
 primes = []
-c = 0
+count = 0
 num = 2
-def prime(num)
-  if num == 2
-    return true
-  end
-  2.upto(num-1){|i|
-    if num%i == 0
-      return false
-    end
+
+
+def is_prime?(n)
+  return true if n == 2
+  2.upto(n-1){|i|
+    return false if n%i == 0
   }
   return true
 end
 
 
-while c < 10001 do
-  if prime(num)
-    primes << num
-    c += 1
-  end
+while count < 10001 do
+  primes << num if is_prime?(num)
+  count += 1
   num += 1
 end
-
 
 puts primes
 
